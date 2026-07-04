@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Counter : MonoBehaviour
 {
+    [SerializeField] private TextCounter _counter;
     [SerializeField] private float _startCount = 0f;
     [SerializeField] private float _delay = 0.5f;
     [SerializeField] private float _endCount = 10f;
@@ -38,6 +39,7 @@ public class Counter : MonoBehaviour
         for (float i = _startCount; i <= _endCount; i += _delay)
         {
             _sumCount += _delay;
+            _counter.Increase();
             Debug.Log($"счётчик - {_sumCount}");
             yield return new WaitForSeconds(_delay);
         }
