@@ -3,14 +3,20 @@ using UnityEngine;
 
 public class TextCounter : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _text;
+    [SerializeField] private InputReader _inputReader;
 
-    private float _textIncrease = 0.5f;
-    private float _currentValue;
-
-    public void Increase()
+    private void OnEnable()
     {
-        _currentValue +=_textIncrease;
-        _text.text = _currentValue.ToString();
-    }   
+        _inputReader.onButtonPassed.AddListener(Text);
+    }
+
+    private void OnDisable()
+    {
+        _inputReader.onButtonPassed.RemoveListener(Text);
+    }
+
+    public void Text() 
+    {
+        Debug.Log("Кнопка нажата");
+    }
 }
