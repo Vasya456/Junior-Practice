@@ -7,6 +7,8 @@ public class TextCounter : MonoBehaviour
 
     private float _counter;
     private float step = 0.5f;
+    private float _counterInterval = 0.5f;
+
     private Coroutine _coroutine;
 
     private bool _isWork = true;
@@ -41,7 +43,7 @@ public class TextCounter : MonoBehaviour
         {
             _counter += step;
             Debug.Log(_counter);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(_counterInterval);
         }
     }
 }
