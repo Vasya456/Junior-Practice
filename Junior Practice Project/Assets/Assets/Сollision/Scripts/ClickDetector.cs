@@ -1,8 +1,16 @@
 using UnityEngine;
+using System;
 
 public class ClickDetector : MonoBehaviour
 {
-    [SerializeField] private Create _create;
+    public event Action<CubeInfo> CubeClicked;
+
+    private Camera _camera;
+    private void Awake()
+
+    {
+        _camera = Camera.main;
+    }
 
     private void Update()
     {
@@ -11,39 +19,27 @@ public class ClickDetector : MonoBehaviour
 
     private void Detector()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!Input.GetMouseButtonDown(0))
+            return;
+
+        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+
+        if (!Physics.Raycast(ray, out RaycastHit hit))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                GameObject clickedObject = hit.collider.gameObject;
-
-                Vector3 spawnPosition = clickedObject.transform.position;
-                Quaternion spawnRotation = clickedObject.transform.rotation;
-
-                CubeInfo info = clickedObject.GetComponent<CubeInfo>();
-                float currentChance = 100f;
-                
-                if (info != null)
-                    currentChance = info.Chance;
-
-                float roll = Random.Range(0f, 100f);
-
-                Debug.Log("Вы кликнули по обьекту " + clickedObject.name);
-
-                Destroy(clickedObject);
-
-                if (roll < currentChance)
-                {
-                    _create.CreateCube(spawnPosition, spawnRotation, currentChance / 2f);
-                }
-            }
-            else
-            {
-                Debug.Log("Вы не попали по обьекту");
-            }
+            Debug.Log("Вы не попали по обьекту");
+            return;
         }
+
+        GameObject clickedObject = hit.collider.gameObject;
+
+        if (!clickedObject.TryGetComponent<CubeInfo>(out CubeInfo info))
+        {
+            Debug.Log("Вы не попали по обьекту " + clickedObject.name);
+            return;
+        }
+
+        Debug.Log("Вы кликнули по обьекту " + clickedObject.name);
+
+        CubeClicked?.Invoke(info);
     }
 }
