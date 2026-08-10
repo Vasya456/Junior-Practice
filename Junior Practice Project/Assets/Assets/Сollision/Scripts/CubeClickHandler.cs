@@ -10,8 +10,7 @@ public class CubeClickHandler : MonoBehaviour
     [SerializeField] private float _maxChanceRoll = 100f;
 
     private void OnEnable()
-    {
-        Debug.Log("CubeClickHandler.OnEnable, clickDetector = " + _clickDetector);
+    {      
         _clickDetector.CubeClicked += HandleCubeClicked;
     }
 
@@ -20,10 +19,8 @@ public class CubeClickHandler : MonoBehaviour
         _clickDetector.CubeClicked -= HandleCubeClicked;
     }
 
-    private void HandleCubeClicked(CubeInfo info)
-    {
-        Debug.Log("HandleCubeClicked вызван для " + info.name);
-
+    private void HandleCubeClicked(Cube info)
+    {      
         Vector3 spawnPosition = info.transform.position;
         Quaternion spawnRotation = info.transform.rotation;
         float currentChance = info.Chance;

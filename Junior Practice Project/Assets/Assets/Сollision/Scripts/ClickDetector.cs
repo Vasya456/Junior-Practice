@@ -3,7 +3,7 @@ using System;
 
 public class ClickDetector : MonoBehaviour
 {
-    public event Action<CubeInfo> CubeClicked;
+    public event Action<Cube> CubeClicked;
 
     private Camera _camera;
     private void Awake()
@@ -32,13 +32,11 @@ public class ClickDetector : MonoBehaviour
 
         GameObject clickedObject = hit.collider.gameObject;
 
-        if (!clickedObject.TryGetComponent<CubeInfo>(out CubeInfo info))
+        if (!clickedObject.TryGetComponent<Cube>(out Cube info))
         {
             Debug.Log("Вы не попали по обьекту " + clickedObject.name);
             return;
         }
-
-        Debug.Log("Вы кликнули по обьекту " + clickedObject.name);
 
         CubeClicked?.Invoke(info);
     }
