@@ -1,16 +1,25 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class CubeTask2 : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private float _chance;
+
+    private void Awake() 
     {
-        
+        if (TryGetComponent<Rigidbody>(out Rigidbody rb))
+        {
+            rb.useGravity = false;
+            rb.isKinematic = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public float Chance => _chance;
+
+    public void SetChance(float chance) 
     {
-        
+        _chance = chance;
     }
+    
+
 }

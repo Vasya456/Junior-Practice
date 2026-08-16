@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 210355370}
   - component: {fileID: 210355369}
   - component: {fileID: 210355373}
-  - component: {fileID: 210355374}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -241,19 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b1b78c8884b45f498cffa9a7443a04a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &210355374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210355368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 452f5608c6207874992fc2b1d22215f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _chance: 50
+  _chance: 0
 --- !u!1 &264236680
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +253,7 @@ GameObject:
   - component: {fileID: 264236684}
   - component: {fileID: 264236683}
   - component: {fileID: 264236685}
+  - component: {fileID: 264236686}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -300,6 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7baad403bb7b044bb8e3ddb7f547af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _explosion: {fileID: 264236686}
   _cubePrefab:
   - {fileID: 1433393965}
   - {fileID: 634694329}
@@ -307,9 +296,6 @@ MonoBehaviour:
   - {fileID: 1915863957}
   _spawnSpread: 1.5
   _scaleMultiplier: 0.5
-  _explosionForce: 50
-  _explosionRadius: 5
-  _upwardModifier: 1
   minCubeCount: 2
   maxCubeCount: 7
   minRandomIndex: 0
@@ -342,6 +328,21 @@ MonoBehaviour:
   _divider: 2
   _minChanceRoll: 0
   _maxChanceRoll: 100
+--- !u!114 &264236686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264236680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2561968c9a8c785418ee0a1e346b7092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _explosionForce: 300
+  _explosionRadius: 5
+  _upwardModifier: 1
 --- !u!1 &327927089
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +515,6 @@ GameObject:
   - component: {fileID: 634694326}
   - component: {fileID: 634694325}
   - component: {fileID: 634694329}
-  - component: {fileID: 634694330}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -623,19 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b1b78c8884b45f498cffa9a7443a04a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &634694330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 634694324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 452f5608c6207874992fc2b1d22215f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _chance: 50
+  _chance: 0
 --- !u!1 &1178739121
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,7 +774,6 @@ GameObject:
   - component: {fileID: 1433393962}
   - component: {fileID: 1433393961}
   - component: {fileID: 1433393965}
-  - component: {fileID: 1433393966}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -895,19 +882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b1b78c8884b45f498cffa9a7443a04a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1433393966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433393960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 452f5608c6207874992fc2b1d22215f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _chance: 50
+  _chance: 0
 --- !u!1 &1724283216
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,7 +949,6 @@ GameObject:
   - component: {fileID: 1915863954}
   - component: {fileID: 1915863953}
   - component: {fileID: 1915863957}
-  - component: {fileID: 1915863958}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -1081,18 +1055,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b1b78c8884b45f498cffa9a7443a04a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1915863958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915863952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 452f5608c6207874992fc2b1d22215f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _chance: 50
