@@ -2,8 +2,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class ChangeColor : MonoBehaviour
-{       
-    public void ApplyRandomColor(GameObject cube) 
+{
+    public void ApplyRandomColor(GameObject cube)
     {
         if (!cube.TryGetComponent<Renderer>(out Renderer renderer))
             return;

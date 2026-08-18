@@ -14,9 +14,6 @@ public class ObjectPool : MonoBehaviour
     [SerializeField] private float _minRandomIndex = 0;
     [SerializeField] private float _spawnSpread = 1.5f;
 
-
-
-
     private readonly Queue<CubeDinamic> pool = new Queue<CubeDinamic>();
 
     private void Start()
@@ -37,7 +34,7 @@ public class ObjectPool : MonoBehaviour
             CubeDinamic obj = Instantiate(prefab, _cubeSpawnPosition.position + offset, transform.rotation);
 
             pool.Enqueue(obj);
-          
+
         }
     }
 }
