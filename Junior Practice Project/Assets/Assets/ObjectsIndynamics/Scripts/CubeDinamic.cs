@@ -1,25 +1,59 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class CubeDinamic : MonoBehaviour
 {
     [SerializeField] private ChangeColor _changeColor;
+    [SerializeField] private ObjectPool _objectPool;
 
     [SerializeField] private float _minRangeDelete = 2;
     [SerializeField] private float _maxRanageDelete = 5;
 
     private bool _hasCollided = false;
+    private Coroutine _returnCoroutine;
+    private Rigidbody _rigidbody;
+
+    private void Awake()
+    {
+        _rigidbody = GetComponent<Rigidbody>();
+    }
+
+    public void ResetState() 
+    {
+        _hasCollided = false;
+
+        if (_returnCoroutine != null) 
+        {
+            StopCoroutine(_returnCoroutine);
+            _returnCoroutine = null;
+        }
+
+        _rigidbody.linearVelocity = Vector3.zero;
+        _rigidbody.angularVelocity = Vector3.zero;     
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Plane") && _hasCollided == false)
+        if (_hasCollided)
+            return;
+
+        if (collision.gameObject.TryGetComponent<Plane>(out Plane plane))
         {
             _hasCollided = true;
-            _changeColor.ApplyRandomColor(gameObject);
+            
+            if(_changeColor.TryGetComponent(out Renderer renderer))
+            _changeColor.ApplyRandomColor(renderer);
 
             float delay = Random.Range(_minRangeDelete, _maxRanageDelete);
-            Destroy(gameObject, delay);
-
+            _returnCoroutine = StartCoroutine(ReturnToPoolAfterDelay(delay));
         }
+    }
+
+    private IEnumerator ReturnToPoolAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        _objectPool.ReturnCube(this);
+        _objectPool.SpawnCube();
     }
 }

@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 3590805213225160339}
   - component: {fileID: 653531036616801746}
   - component: {fileID: 9088885232273793335}
-  - component: {fileID: -8371350874880554321}
+  - component: {fileID: 3162627392937519941}
   - component: {fileID: 7129139952404740745}
-  - component: {fileID: 8478587514517032828}
+  - component: {fileID: -6887388923437765468}
   m_Layer: 0
-  m_Name: Cube 3
+  m_Name: Cube 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-8371350874880554321
+--- !u!114 &3162627392937519941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,7 +123,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15d78f589b5c09243bf5668cdd916d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _changeColor: {fileID: 8478587514517032828}
+  _changeColor: {fileID: -6887388923437765468}
+  _objectPool: {fileID: 7737393732285879821, guid: 72b9bef2db7a49648a9b1eaa90d3f8df, type: 3}
+  _minRangeDelete: 2
+  _maxRanageDelete: 5
 --- !u!54 &7129139952404740745
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -151,7 +154,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8478587514517032828
+--- !u!114 &-6887388923437765468
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

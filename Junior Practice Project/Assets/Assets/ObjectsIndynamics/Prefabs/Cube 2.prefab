@@ -124,6 +124,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _changeColor: {fileID: -7814474358656209609}
+  _objectPool: {fileID: 7737393732285879821, guid: 72b9bef2db7a49648a9b1eaa90d3f8df, type: 3}
+  _minRangeDelete: 2
+  _maxRanageDelete: 5
 --- !u!54 &7129139952404740745
 Rigidbody:
   m_ObjectHideFlags: 0
