@@ -124,6 +124,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5039937709741020054, guid: 92fa3b49083cb534db95abd4acb2911b, type: 3}
   m_PrefabInstance: {fileID: 546005226132535709}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1215671545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8554363331285016906, guid: 72b9bef2db7a49648a9b1eaa90d3f8df, type: 3}
+  m_PrefabInstance: {fileID: 8889705155092449476}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1215671548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215671545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff7e402416def941901547bfbf02deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cubeDinamicPrefabs: []
+  _cubeSpawnPosition: {fileID: 0}
+  _minCountSize: 2
+  _maxCountSize: 7
+  _minRandomIndex: 0
+  _spawnSpread: 1.5
+--- !u!54 &1215671549
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215671545}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1272595278
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,6 +746,26 @@ PrefabInstance:
       propertyPath: _cubeSpawnPosition
       value: 
       objectReference: {fileID: 603798807}
+    - target: {fileID: 7737393732285879821, guid: 72b9bef2db7a49648a9b1eaa90d3f8df, type: 3}
+      propertyPath: _cubeDinamicPrefabs.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737393732285879821, guid: 72b9bef2db7a49648a9b1eaa90d3f8df, type: 3}
+      propertyPath: '_cubeDinamicPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737393732285879821, guid: 72b9bef2db7a49648a9b1eaa90d3f8df, type: 3}
+      propertyPath: '_cubeDinamicPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737393732285879821, guid: 72b9bef2db7a49648a9b1eaa90d3f8df, type: 3}
+      propertyPath: '_cubeDinamicPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737393732285879821, guid: 72b9bef2db7a49648a9b1eaa90d3f8df, type: 3}
+      propertyPath: '_cubeDinamicPrefabs.Array.data[3]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8554363331285016906, guid: 72b9bef2db7a49648a9b1eaa90d3f8df, type: 3}
       propertyPath: m_Name
       value: Spawner
@@ -740,10 +810,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 105837835712019205, guid: 72b9bef2db7a49648a9b1eaa90d3f8df, type: 3}
+    - {fileID: 7737393732285879821, guid: 72b9bef2db7a49648a9b1eaa90d3f8df, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8554363331285016906, guid: 72b9bef2db7a49648a9b1eaa90d3f8df, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1215671549}
+    - targetCorrespondingSourceObject: {fileID: 8554363331285016906, guid: 72b9bef2db7a49648a9b1eaa90d3f8df, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1215671548}
   m_SourcePrefab: {fileID: 100100000, guid: 72b9bef2db7a49648a9b1eaa90d3f8df, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
