@@ -7,21 +7,50 @@ public class EnemySpawners : MonoBehaviour
     [SerializeField] private Enemy _enemy;
 
     [SerializeField] private Transform[] _spawners;
-    
+
+    private bool isWork = true;
+
+    private float _counterInterval = 2;
+    private int spawnerMinIndex = 0;
 
     private readonly Queue<Enemy> _enemyPool = new Queue<Enemy>();
 
-    private void Update()
+    private void Start()
     {
-        CreateEnemy();
+        StartCoroutine(Cooldown());
     }
-
-
+  
     private void CreateEnemy() 
     {
-        int spawnersIndex = 5;
+        int spawnersIndex = Random.Range(spawnerMinIndex, _spawners.Length);
+        Transform spawner = _spawners[spawnersIndex];
 
-        Enemy prefab = Instantiate(_enemy, _spawners[spawnersIndex].position, transform.rotation);
-        _enemyPool.Enqueue(prefab);
+        Vector3 spawnPosition = spawner.position;
+        Vector3 direction = spawner.forward;       
+
+        if (_enemyPool.Count > 0)
+        {
+            _enemy = _enemyPool.Dequeue();
+            _enemy.transform.position = spawnPosition;
+            _enemy.gameObject.SetActive(true);         
+        }
+        else
+        {
+            _enemy = Instantiate(_enemy, spawnPosition, transform.rotation);
+        }
+
+        _enemy.SetDirection(direction);
+    }
+
+    private IEnumerator Cooldown()
+    {
+        while (isWork)
+        {
+            yield return new WaitForSeconds(_counterInterval);
+            CreateEnemy();
+        }
     }
 }
+
+
+
