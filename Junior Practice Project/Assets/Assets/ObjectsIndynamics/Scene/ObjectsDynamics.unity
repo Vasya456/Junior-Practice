@@ -141,8 +141,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff7e402416def941901547bfbf02deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cubeDinamicPrefabs: []
-  _cubeSpawnPosition: {fileID: 0}
+  _cubeDinamicPrefabs:
+  - {fileID: -6654732105248597348, guid: 8fbe30ccfc073444780459d9f27ba150, type: 3}
+  - {fileID: -3743480585347933910, guid: 482fb91eb8bab42468830b141bd7b7ca, type: 3}
+  - {fileID: 6627455047174562658, guid: c3642b591ce5f4d4fa311269ba0e6dfc, type: 3}
+  - {fileID: -4924574610270630287, guid: 7bf798c58d49521418c060a26de97d16, type: 3}
+  _cubeSpawnPosition: {fileID: 603798807}
   _minCountSize: 2
   _maxCountSize: 7
   _minRandomIndex: 0
@@ -504,8 +508,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670177401}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.29724556, y: 0.0042933705, z: -0.0013352805, w: 0.9547905}
-  m_LocalPosition: {x: -0.8974712, y: 10.653265, z: -14.261769}
+  m_LocalRotation: {x: -0.2725597, y: 0.04096863, z: -0.011617112, w: -0.9611961}
+  m_LocalPosition: {x: 1.9607618, y: 10.01194, z: -11.81208}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15d78f589b5c09243bf5668cdd916d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _changeColor: {fileID: -6887388923437765468, guid: 482fb91eb8bab42468830b141bd7b7ca, type: 3}
+  _changeColor: {fileID: 4759871618139716877}
   _objectPool: {fileID: 0}
   _minRangeDelete: 2
   _maxRanageDelete: 5

@@ -5,10 +5,11 @@ using UnityEngine;
 public class CubeDinamic : MonoBehaviour
 {
     [SerializeField] private ChangeColor _changeColor;
-    [SerializeField] private ObjectPool _objectPool;
 
     [SerializeField] private float _minRangeDelete = 2;
     [SerializeField] private float _maxRanageDelete = 5;
+    [SerializeField] private float _fallLimitY = -20f;
+    private ObjectPool _objectPool;
 
     private bool _hasCollided = false;
     private Coroutine _returnCoroutine;
@@ -19,6 +20,16 @@ public class CubeDinamic : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
+    public void Init(ObjectPool objectPool)
+    {
+        _objectPool = objectPool;
+    }
+
+    private void Update()
+    {
+        if (transform.position.y < _fallLimitY)
+            _objectPool.ReturnCube(this);
+    }
     public void ResetState() 
     {
         _hasCollided = false;
@@ -28,6 +39,8 @@ public class CubeDinamic : MonoBehaviour
             StopCoroutine(_returnCoroutine);
             _returnCoroutine = null;
         }
+        
+        _changeColor.ResetColor();
 
         _rigidbody.linearVelocity = Vector3.zero;
         _rigidbody.angularVelocity = Vector3.zero;     
@@ -54,6 +67,5 @@ public class CubeDinamic : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         _objectPool.ReturnCube(this);
-        _objectPool.SpawnCube();
     }
 }
