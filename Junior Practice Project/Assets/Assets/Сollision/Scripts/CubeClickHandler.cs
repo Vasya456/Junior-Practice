@@ -3,7 +3,7 @@ using UnityEngine;
 public class CubeClickHandler : MonoBehaviour
 {
     [SerializeField] private ClickDetector _clickDetector;
-    [SerializeField] private CubeSpawner _cubeSpawner;
+    [SerializeField] private CubeSpawnerDinamics _cubeSpawner;
 
     [SerializeField] private float _divider = 2;
     [SerializeField] private float _minChanceRoll = 0f;

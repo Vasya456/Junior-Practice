@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CubeSpawner : MonoBehaviour
+public class CubeSpawnerDinamics : MonoBehaviour
 {
 
     [SerializeField] private Explosion _explosion;

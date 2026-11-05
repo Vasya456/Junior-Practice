@@ -3,9 +3,9 @@ using UnityEngine;
 public class EnemyTask2 : MonoBehaviour
 {
     [SerializeField] private float _speedTask2;
-    [SerializeField] private Transform _target;
+     private Transform _target;
 
-    private Vector3 _direction;
+   
 
     private void Update()
     {

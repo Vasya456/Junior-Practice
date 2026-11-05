@@ -7,23 +7,28 @@ public class EnemySpawnersTask2 : MonoBehaviour
     [SerializeField] private Transform _target;
     [SerializeField] private float _counterInterval = 2;
     private bool _isWork = true;
+    private WaitForSeconds _wait;
 
     private void Start()
     {
-        StartCoroutine(Cooldown());
+        _wait = new WaitForSeconds(_counterInterval);
+        StartCoroutine(SpawnRoutine());
     }
 
     private void CreateEnemy() 
-    {   
-      EnemyTask2 enemy = Instantiate(_enemyPrefabTask2, transform.position, transform.rotation);
-      enemy.SetTarget(_target);
+    {
+        if (_enemyPrefabTask2 == null || _target == null)
+            return;
+
+        EnemyTask2 enemy = Instantiate(_enemyPrefabTask2, transform.position, transform.rotation);
+        enemy.SetTarget(_target);
     }
    
-    private IEnumerator Cooldown()
+    private IEnumerator SpawnRoutine()
     {
         while (_isWork)
         {
-            yield return new WaitForSeconds(_counterInterval);
+            yield return _wait;
             CreateEnemy();
         }
     }

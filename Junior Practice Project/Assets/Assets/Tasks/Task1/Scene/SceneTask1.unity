@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d5012052702af4598494672df83d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 7374650082085004610, guid: c7daea11406f3d04e85b325f8ea75afa, type: 3}
+  _enemy: {fileID: 5372364119379770109, guid: cc8367b53fe2eaf42b2b131ae2fbe96e, type: 3}
   _spawners:
   - {fileID: 488214321}
   - {fileID: 481231443}

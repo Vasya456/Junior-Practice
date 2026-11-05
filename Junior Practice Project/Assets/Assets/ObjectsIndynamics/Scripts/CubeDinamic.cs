@@ -1,11 +1,11 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class CubeDinamic : MonoBehaviour
 {
-    [SerializeField] private ChangeColor _changeColor;
-
+    [SerializeField] private ColorChanger _changeColor;
     [SerializeField] private float _minRangeDelete = 2;
     [SerializeField] private float _maxRanageDelete = 5;
     [SerializeField] private float _fallLimitY = -20f;
@@ -15,20 +15,17 @@ public class CubeDinamic : MonoBehaviour
     private Coroutine _returnCoroutine;
     private Rigidbody _rigidbody;
 
+    public event Action<CubeDinamic> Released;
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    public void Init(ObjectPool objectPool)
-    {
-        _objectPool = objectPool;
-    }
-
     private void Update()
     {
         if (transform.position.y < _fallLimitY)
-            _objectPool.ReturnCube(this);
+            Release();
     }
     public void ResetState() 
     {
@@ -58,14 +55,20 @@ public class CubeDinamic : MonoBehaviour
             if(_changeColor.TryGetComponent(out Renderer renderer))
             _changeColor.ApplyRandomColor(renderer);
 
-            float delay = Random.Range(_minRangeDelete, _maxRanageDelete);
-            _returnCoroutine = StartCoroutine(ReturnToPoolAfterDelay(delay));
+            float delay = UnityEngine.Random.Range(_minRangeDelete, _maxRanageDelete);
+            _returnCoroutine = StartCoroutine(ReleaseAfterDelay(delay));
         }
     }
 
-    private IEnumerator ReturnToPoolAfterDelay(float delay)
+    private IEnumerator ReleaseAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
-        _objectPool.ReturnCube(this);
+        Release();
     }
+
+    private void Release()
+    {
+        Released?.Invoke(this);
+    }
+
 }
