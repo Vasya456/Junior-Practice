@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         Move();
 
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
 //2D платформер *
 //Создать простой 2D платформер, в котором реализовать:
 
-//-Управление персонажем(бег, прыжки);
+//-Управление персонажем(бег, прыжки); +
 
 //-Анимацию бега(прыжок не обязательно);
 
