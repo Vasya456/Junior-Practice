@@ -1,17 +1,28 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerController : MonoBehaviour
+public class PlayerController : Characters
 {
+
+    private static readonly int IsAttackingHash = Animator.StringToHash("IsAttacking");
     public readonly string HorizonAxes = "Horizontal";
 
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
+    [SerializeField] private float _maxhealth;
+    [SerializeField] private Transform _target;
+    [SerializeField] private float _attackRange;
+
+    private float _currentHealth;
     private Rigidbody2D _rigidbody;
+    private Animator _animator;
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+
+        _currentHealth = _maxhealth;
     }
 
     private void Update()
@@ -20,6 +31,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
             Jump();
+
+        Attack();
     }
 
     private void Move()
@@ -32,8 +45,24 @@ public class PlayerController : MonoBehaviour
     {
         _rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
     }
-}
 
+    private void Attack()
+    {
+        if (_target == null || _animator == null)
+            return;
+
+        float distance = Vector2.Distance(transform.position, _target.position);
+        bool inRange = distance <= _attackRange;
+
+        _animator.SetBool(IsAttackingHash, inRange);       
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, _attackRange);
+    }
+}
 //Битва за платформер - Начало
 //Продолжаем работать над платформером, реализуем работу со здоровьем персонажа. 
 

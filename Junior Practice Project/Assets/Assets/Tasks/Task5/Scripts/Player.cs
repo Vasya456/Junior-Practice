@@ -8,10 +8,12 @@ public class Player : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
     private Rigidbody2D _rigidbody;
+   
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+         
     }
 
     private void Update()
@@ -32,6 +34,9 @@ public class Player : MonoBehaviour
     {
         _rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
     }
+
+   
+
 }
 
 
