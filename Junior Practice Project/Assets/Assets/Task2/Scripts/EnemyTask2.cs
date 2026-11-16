@@ -3,16 +3,15 @@ using UnityEngine;
 public class EnemyTask2 : MonoBehaviour
 {
     [SerializeField] private float _speedTask2;
-     private Transform _target;
 
-   
+    private Transform _target;
 
     private void Update()
     {
-        MoveTask2();    
+        MoveTask2();
     }
 
-    public void SetTarget(Transform target) 
+    public void SetTarget(Transform target)
     {
         _target = target;
     }
@@ -22,6 +21,6 @@ public class EnemyTask2 : MonoBehaviour
         if (_target == null)
             return;
 
-        transform.position = Vector3.MoveTowards(transform.position, _target.position, _speedTask2 * Time.deltaTime);     
+        transform.position = Vector3.MoveTowards(transform.position, _target.position, _speedTask2 * Time.deltaTime);
     }
 }

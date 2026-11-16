@@ -15,10 +15,9 @@ public class TargetPatrol : MonoBehaviour
         Transform waypoint = _wayPoints[_currentIndex];
         transform.position = Vector3.MoveTowards(transform.position, waypoint.position, _speed * Time.deltaTime);
 
-        if (transform.position == waypoint.position) 
+        if (transform.position == waypoint.position)
         {
             _currentIndex = (_currentIndex + 1) % _wayPoints.Length;
         }
     }
-
 }

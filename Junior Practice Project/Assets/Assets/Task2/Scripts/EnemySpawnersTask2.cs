@@ -6,6 +6,7 @@ public class EnemySpawnersTask2 : MonoBehaviour
     [SerializeField] private EnemyTask2 _enemyPrefabTask2;
     [SerializeField] private Transform _target;
     [SerializeField] private float _counterInterval = 2;
+
     private bool _isWork = true;
     private WaitForSeconds _wait;
 
@@ -15,7 +16,7 @@ public class EnemySpawnersTask2 : MonoBehaviour
         StartCoroutine(SpawnRoutine());
     }
 
-    private void CreateEnemy() 
+    private void CreateEnemy()
     {
         if (_enemyPrefabTask2 == null || _target == null)
             return;
@@ -23,7 +24,7 @@ public class EnemySpawnersTask2 : MonoBehaviour
         EnemyTask2 enemy = Instantiate(_enemyPrefabTask2, transform.position, transform.rotation);
         enemy.SetTarget(_target);
     }
-   
+
     private IEnumerator SpawnRoutine()
     {
         while (_isWork)
