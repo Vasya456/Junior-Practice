@@ -9,7 +9,7 @@ public class SpawnerTask5 : MonoBehaviour
     [SerializeField] private Transform[] _spawners;
 
 
-    private bool isWork = true;
+    private bool _isWork = true;
 
     private float _counterInterval = 2;
     private int spawnerMinIndex = 0;
@@ -34,7 +34,7 @@ public class SpawnerTask5 : MonoBehaviour
 
     private IEnumerator Cooldown()
     {
-        while (isWork)
+        while (_isWork)
         {
             yield return new WaitForSeconds(_counterInterval);
             CreateApple();

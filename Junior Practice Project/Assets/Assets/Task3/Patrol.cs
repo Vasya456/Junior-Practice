@@ -16,7 +16,6 @@ public class Patrol : MonoBehaviour
             _points[i] = _pointsPosition.GetChild(i);
     }
 
-
     private void Update()
     {
         Transform target = _points[_currentPointIndex];

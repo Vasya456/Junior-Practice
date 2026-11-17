@@ -17,7 +17,8 @@ public class Shoot : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         StartCoroutine(ShootingCooldown());
     }
-   private IEnumerator ShootingCooldown()
+   
+    private IEnumerator ShootingCooldown()
     {        
         while (_isWork)
         {
