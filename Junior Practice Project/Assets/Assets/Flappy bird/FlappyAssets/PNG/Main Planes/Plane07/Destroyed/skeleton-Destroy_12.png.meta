@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 27a28eb2478d1124daefe9a4077cf7b7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3840537493055848823
+    second: skeleton-Destroy_12_0
+  - first:
+      213: 3429203760123840201
+    second: skeleton-Destroy_12_1
+  - first:
+      213: -2783185093422888739
+    second: skeleton-Destroy_12_2
+  - first:
+      213: 5484499401088460875
+    second: skeleton-Destroy_12_3
+  - first:
+      213: -7550081222989412607
+    second: skeleton-Destroy_12_4
+  - first:
+      213: 1403750214800587509
+    second: skeleton-Destroy_12_5
+  - first:
+      213: 7193094001731743870
+    second: skeleton-Destroy_12_6
+  - first:
+      213: 3390003648103630549
+    second: skeleton-Destroy_12_7
+  - first:
+      213: -804155860957969404
+    second: skeleton-Destroy_12_8
+  - first:
+      213: 5602349976347547812
+    second: skeleton-Destroy_12_9
+  - first:
+      213: -8364938390222830763
+    second: skeleton-Destroy_12_10
+  - first:
+      213: 7150101838878825235
+    second: skeleton-Destroy_12_11
+  - first:
+      213: 6781606485304431382
+    second: skeleton-Destroy_12_12
+  - first:
+      213: -5518838901696616802
+    second: skeleton-Destroy_12_13
+  - first:
+      213: -3789950332215177792
+    second: skeleton-Destroy_12_14
+  - first:
+      213: -1369757363728581517
+    second: skeleton-Destroy_12_15
+  - first:
+      213: 3176733567905762302
+    second: skeleton-Destroy_12_16
+  - first:
+      213: 6547324344321353587
+    second: skeleton-Destroy_12_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_0
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 310
+        width: 128
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 771c92c70845c4530800000000000000
+      internalID: 3840537493055848823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_1
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 440
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c68d90b6aaf69f20800000000000000
+      internalID: 3429203760123840201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_2
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 417
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd8cd5a47e32069d0800000000000000
+      internalID: -2783185093422888739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_3
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 155
+        width: 239
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4868bca52bdc1c40800000000000000
+      internalID: 5484499401088460875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_4
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 406
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1078e563129b83790800000000000000
+      internalID: -7550081222989412607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_5
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 334
+        width: 105
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fa319a026f1b7310800000000000000
+      internalID: 1403750214800587509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_6
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 393
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e70b63942e003d360800000000000000
+      internalID: 7193094001731743870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_7
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 381
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6ce706b56bb0f20800000000000000
+      internalID: 3390003648103630549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_8
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 356
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4044d8b418017d4f0800000000000000
+      internalID: -804155860957969404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_9
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 318
+        width: 43
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a81d97fe9b8fbd40800000000000000
+      internalID: 5602349976347547812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_10
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 302
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5538dba7ad4c9eb80800000000000000
+      internalID: -8364938390222830763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_11
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 300
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31b5d365db34a3360800000000000000
+      internalID: 7150101838878825235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_12
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 276
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6135e0bfa2b1d1e50800000000000000
+      internalID: 6781606485304431382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_13
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 197
+        width: 55
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9624cb42452963b0800000000000000
+      internalID: -5518838901696616802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_14
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 209
+        width: 42
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cdc0fbb044676bc0800000000000000
+      internalID: -3789950332215177792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_15
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 188
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c7b7a5fe4adfce0800000000000000
+      internalID: -1369757363728581517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_16
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 134
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efb05155956061c20800000000000000
+      internalID: 3176733567905762302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton-Destroy_12_17
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 91
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 377aa8c4dc4ccda50800000000000000
+      internalID: 6547324344321353587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      skeleton-Destroy_12_0: 3840537493055848823
+      skeleton-Destroy_12_1: 3429203760123840201
+      skeleton-Destroy_12_10: -8364938390222830763
+      skeleton-Destroy_12_11: 7150101838878825235
+      skeleton-Destroy_12_12: 6781606485304431382
+      skeleton-Destroy_12_13: -5518838901696616802
+      skeleton-Destroy_12_14: -3789950332215177792
+      skeleton-Destroy_12_15: -1369757363728581517
+      skeleton-Destroy_12_16: 3176733567905762302
+      skeleton-Destroy_12_17: 6547324344321353587
+      skeleton-Destroy_12_2: -2783185093422888739
+      skeleton-Destroy_12_3: 5484499401088460875
+      skeleton-Destroy_12_4: -7550081222989412607
+      skeleton-Destroy_12_5: 1403750214800587509
+      skeleton-Destroy_12_6: 7193094001731743870
+      skeleton-Destroy_12_7: 3390003648103630549
+      skeleton-Destroy_12_8: -804155860957969404
+      skeleton-Destroy_12_9: 5602349976347547812
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

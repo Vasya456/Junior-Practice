@@ -9,11 +9,13 @@ public class PlayerController : Characters
 
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
-    [SerializeField] private float _maxhealth;
+  //  [SerializeField] private float _maxhealth;
     [SerializeField] private Transform _target;
     [SerializeField] private float _attackRange;
 
-    private float _currentHealth;
+    
+
+ //   private float _currentHealth;
     private Rigidbody2D _rigidbody;
     private Animator _animator;
 
@@ -56,6 +58,7 @@ public class PlayerController : Characters
 
         _animator.SetBool(IsAttackingHash, inRange);       
     }
+
 
     private void OnDrawGizmosSelected()
     {
