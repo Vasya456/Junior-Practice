@@ -2,13 +2,18 @@ using UnityEngine;
 
 public class Characters : MonoBehaviour
 {
-    [SerializeField] private float _maxhealth;
+    [SerializeField] protected float _maxhealth;
 
-    private float _currentHealth;
+    protected float _currentHealth;
 
 
     private void Start()
     {
         _currentHealth = _maxhealth;
+    }
+
+    public void TakeHealth(float health)
+    {
+        _currentHealth += health;
     }
 }
